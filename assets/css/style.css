@@ -176,14 +176,14 @@ footer p {
     will-change: transform;
 }
 
-.slide-deacription {
+.slide-description {
     position: relative;
     width: 500px;
     height: 20px;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.slide-deacription p {
+.slide-description p {
     position: absolute;
     color: #fff;
     font-size: 20px;
