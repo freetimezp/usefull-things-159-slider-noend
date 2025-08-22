@@ -10,7 +10,8 @@ a {
     text-decoration: none;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -126,7 +127,7 @@ footer p {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: rgba(0, 0, 0, .125);
+    background-color: rgba(0, 0, 0, 0.125);
 }
 
 .slide-main-img {
@@ -147,6 +148,10 @@ footer p {
     height: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     will-change: clip-path;
+}
+
+.slide-main-img-wrapper img {
+    opacity: 0.9;
 }
 
 .slide-copy {
@@ -190,7 +195,7 @@ footer p {
     font-weight: lighter;
     line-height: 1;
     transform: translateY(0px);
-    will-change: transform; 
+    will-change: transform;
 }
 
 @media (max-width: 900px) {
@@ -202,27 +207,3 @@ footer p {
         left: 60%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

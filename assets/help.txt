@@ -1,0 +1,19 @@
+const slideTitles = [
+        "Field Unit",
+        "Astral Convergence",
+        "Eclipse Core",
+        "Luminius",
+        "Serenity",
+        "Nebula Point",
+        "Horizon",
+    ];
+
+    const slideDescriptions = [
+        "Concept Art",
+        "Soundscape",
+        "Experimental Flex",
+        "Provocated",
+        "Music Vol",
+        "VFX",
+        "Set Illusion",
+    ];
