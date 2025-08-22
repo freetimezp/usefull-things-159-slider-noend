@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 {
                     y: direction === "down" ? "50%" : "-50%",
                     duration: 1.25,
-                    opacity: 0.7,
+                    //opacity: 0.9,
                     ease: CustomEase.create("", "0.87, 0, 0.13, 1"),
                 },
                 0
@@ -256,12 +256,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isAnimating || !scrollAllowed) return;
         if (now - lastScrollTime < 1000) return;
+
         lastScrollTime = now;
 
         animateSlide(direction);
     }
 
-    //scroll event
     window.addEventListener(
         "wheel",
         (e) => {
@@ -272,43 +272,4 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         { passive: false }
     );
-
-    //touch event
-    let touchStartY = 0;
-    let isTouchActive = false;
-
-    window.addEventListener(
-        "touchstart",
-        (e) => {
-            e.preventDefault();
-
-            const touchStartY = e.touches[0].clientY;
-            isTouchActive = true;
-        },
-        { passive: false }
-    );
-
-    window.addEventListener(
-        "touchmove",
-        (e) => {
-            e.preventDefault();
-
-            if (!isTouchActive || isAnimating || !scrollAllowed) return;
-
-            const touchCurrentY = e.touches[0].clientY;
-            const difference = touchStartY - touchCurrentY;
-
-            if (Math.abs(difference) > 10) {
-                isTouchActive = false;
-
-                const direction = difference > 0 ? "down" : "up";
-                handleScroll(direction);
-            }
-        },
-        { passive: false }
-    );
-
-    window.addEventListener("touchend", () => {
-        isTouchActive = false;
-    });
 });

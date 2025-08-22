@@ -27,7 +27,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     padding: 3em;
     display: flex;
     justify-content: space-between;
@@ -115,7 +115,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     will-change: clip-path;
 }
 
@@ -146,13 +146,13 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     will-change: clip-path;
 }
 
-.slide-main-img-wrapper img {
+/* .slide-main-img-wrapper img {
     opacity: 0.9;
-}
+} */
 
 .slide-copy {
     position: absolute;
@@ -175,7 +175,7 @@ footer p {
     position: absolute;
     color: #fff;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: lighter;
     line-height: 1;
     transform: translateY(0px);
     will-change: transform;
@@ -196,14 +196,4 @@ footer p {
     line-height: 1;
     transform: translateY(0px);
     will-change: transform;
-}
-
-@media (max-width: 900px) {
-    .slide-main-img {
-        width: 75%;
-    }
-    .slide-copy {
-        top: 60%;
-        left: 60%;
-    }
 }
